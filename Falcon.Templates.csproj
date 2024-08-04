@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <PackageVersion>0.0.1-alpha.0</PackageVersion>
+    <PackageId>Falcon.Templates</PackageId>
+    <Title>Falcon Dotnet Project Templates</Title>
+    <Authors>Natarajan Ganapathi</Authors>
+    <Description>This is Falcon project templates</Description>
+    <PackageTags>dotnet-new;templates</PackageTags>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**;" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+</Project>

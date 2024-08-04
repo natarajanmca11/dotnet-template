@@ -1,12 +1,12 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Natarajan Ganapathi",
-  "classifications": ["Falcon", "Web", "Api"],
-  "identity": "Falcon.WebApi",
-  "name": "Falcon Web Api",
-  "description": "Falcon Web Api",
-  "sourceName": "Falcon.WebApi",
-  "shortName": "falconapi",
+  "classifications": ["Falcon", "Console"],
+  "identity": "Falcon.Console.Template",
+  "name": "Falcon Console Application",
+  "description": "Falcon Console Application",
+  "sourceName": "Falcon.Console.Template",
+  "shortName": "falcon-console",
   "tags": {
     "language": "C#",
     "framework": "Falcon",
@@ -51,7 +51,7 @@
         {
           "condition": "(!IncludeDevAppSettings)",
           "exclude": [
-            "Falcon.WebApi/appsettings.Development.json"
+            "Falcon.Console.Template/appsettings.Development.json"
         ]
         }
       ]

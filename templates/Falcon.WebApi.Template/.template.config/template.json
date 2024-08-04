@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Natarajan Ganapathi",
+  "classifications": ["Falcon", "Web", "Api"],
+  "identity": "Falcon.WebApi.Template",
+  "name": "Falcon Web Api",
+  "description": "Falcon Web Api",
+  "sourceName": "Falcon.WebApi.Template",
+  "shortName": "falcon-webapi",
+  "tags": {
+    "language": "C#",
+    "framework": "Falcon",
+    "type": "project"
+  },
+  "preferNameDirectory": true,
+  "symbols": {
+    "TargetFramework": {
+      "type": "parameter",
+      "description": "Target Framework to be used for the project",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "net7.0"
+        },
+        {
+          "choice": "net8.0"
+        },
+        {
+          "choice": "net9.0"
+        }
+      ],
+      "defaultValue": "net8.0",
+      "replaces": "{TargetFramework}"
+    },
+    "EnableSwaggerSupport": {
+      "type": "parameter",
+      "description": "Enable Swagger Support",
+      "datatype": "bool",
+      "defaultValue": "true"
+    },
+    "IncludeDevAppSettings": {
+      "type": "parameter",
+      "description": "Adds appsettings.Development.json",
+      "datatype": "bool",
+      "defaultValue": "true"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!IncludeDevAppSettings)",
+          "exclude": [
+            "Falcon.WebApi.Template/appsettings.Development.json"
+        ]
+        }
+      ]
+    }
+  ]
+}
