@@ -1,0 +1,6 @@
+@Falcon.WebApi_HostAddress = http://localhost:5189
+
+GET {{Falcon.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
